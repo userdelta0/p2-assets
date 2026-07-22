@@ -14,8 +14,18 @@ hosting/                      <- CFG.base points at THIS folder's public root
   arrow.png                   <- optional pointer-style marker
   sounds/ballbot_ping_0[1-5].wav  <- ATLAS ping SFX (P-body = pitch-shift in code)
 ```
-(36 files. rings/ + beam/ are the real P2 particle textures — see reference/particle_effects.md
+(rings/ + beam/ are the real P2 particle textures — see reference/particle_effects.md
 for how the game layers/rotates/scrolls them and how we reconstruct that.)
+
+## bundle.zip — the primary delivery path
+`bundle.zip` packs every asset above into ONE download. The chip
+(`starfall/portal2_ping.txt` + `starfall/lib_unzip.txt`) downloads it once per client,
+inflates it in-Lua (quota-safe), caches the files to `data/sf_filedata/p2ping/`, and
+loads materials/sounds from disk — reused all session and across sessions until the
+version changes. The individual files above stay hosted as the automatic fallback.
+
+Updating assets: edit files here → run `py ../../tools/make_bundle.py` → commit + push →
+bump `CFG.bundleVersion` in `starfall/portal2_ping.txt` (invalidates client caches).
 
 ## Host on GitHub raw (recommended — on StarfallEx's default whitelist)
 1. Create a **public** GitHub repo, e.g. `p2-ping-assets`.
