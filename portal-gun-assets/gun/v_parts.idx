@@ -1,0 +1,7 @@
+# name offset length  (1-based byte offsets into v_parts.obj)
+body 25 83357
+cover 83408 407608
+claw1 491042 115276
+claw2 606344 113445
+claw3 719815 101522
+potato 821365 425322
