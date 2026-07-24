@@ -1,0 +1,21 @@
+# P2-PropSpawn master prop manifest.
+#
+# ONE PROP PER LINE. Fields are whitespace-separated and read with a plain find("%S+") tokenizer,
+# because StarfallEx caps regex search length by pattern complexity (a 3-capture pattern dies at
+# roughly 150 chars). Never rewrite this parser as a multi-capture match.
+#
+# Blank lines and lines starting with # are skipped.
+#
+#  id        the key the chip and the menu use. no spaces.
+#  label     shown on the menu button. use _ for spaces, the chip converts them.
+#  obj       mesh, relative to the bundle root
+#  tex       surface texture, relative to the bundle root
+#  icon      menu button image, relative to the bundle root
+#  size      the model's real render size in units, measured from its VVD vertex data, NOT guessed.
+#            The chip uses this to pick a physics prop of matching scale.
+#  mass      kg. Portal 2's weighted cubes have no mass keyvalue of their own (they inherit the
+#            metal_box physics), so this is the GMod prop mass we ask for.
+#
+# id             label             obj              tex                        icon                      size   mass
+cube_companion   Companion_Cube    models/cube.obj  textures/cube_companion.png icons/cube_companion.png  35.63  60
+cube_storage     Weighted_Cube     models/cube.obj  textures/cube_storage.png   icons/cube_companion.png  35.63  60
