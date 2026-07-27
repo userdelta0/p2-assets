@@ -83,3 +83,10 @@ anim straightup 30  99  0
 # sound <id> <file> <volume> <radius>
 #   The game's own values for the launch ambient_generic.
 sound launch sounds/launch.wav 0.70 1250
+
+# tex <id> <file>
+#   Landing-target decal, Portal 2's own co-op "command target" overlay
+#   (materials/overlays/command_target, $translucent + $decal + $vertexcolor so it tints).
+#   Used by the chip's placement mode to mark where a launch will land.
+tex target       textures/target.png
+tex target_alt   textures/target_orange.png
