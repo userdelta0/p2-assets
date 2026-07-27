@@ -75,8 +75,10 @@ skin normal textures/faith_plate.png
 tex arm textures/arm_64x64_exterior.png
 
 # anim <id> <fps> <frames> <looping>
-#   Curves live in anims/faith_plate_128_anims.lua (per-frame LOCAL bone deltas vs bind pose:
-#   pos = {x,y,z} source units, rot = {p,y,r} degrees in GMod Angle order).
+#   Curves live in anims/faith_plate_128_anims.txt -- flat whitespace records, because the chip
+#   gets these as a STRING from the zip and StarfallEx has no loadstring to evaluate a .lua table.
+#   The .lua form is kept alongside for reference. Per-frame LOCAL bone deltas vs bind pose:
+#   pos = {x,y,z} source units, rot = {p,y,r} degrees in GMod Angle order.
 anim BindPose   30   1  0
 anim straightup 30  99  0
 
