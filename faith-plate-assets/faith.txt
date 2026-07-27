@@ -97,8 +97,13 @@ skin normal textures/faith_plate.png
 skin error  textures/faith_plate_error.png
 
 # tex <id> <file>
-tex target     textures/target.png
-tex target_alt textures/target_orange.png
+# The LANDING indicator is Portal 2's own faith plate overlay signage_overlay_catapult2 - a
+# falling figure over concentric ground rings, which is what the game paints where a plate throws
+# you. (The earlier pick, overlays/command_target, is the CO-OP PING ring - a different thing
+# entirely.) catapult1 is the matching launch-side sign, kept for the plate itself.
+tex target        textures/target.png
+tex target_launch textures/target_launch.png
+tex target_alt    textures/target_orange.png
 tex arm        textures/arm_64x64_exterior.png
 
 # anim <id> <fps> <frames> <looping>
