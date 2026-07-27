@@ -40,54 +40,54 @@
 # ===================================== SMALL (default) =====================================
 model small models/faith_plate.obj anims/faith_plate_anims.txt
 # id                 tex                                  px       py       pz  bone
-part body         textures/faith_plate.png            0.00     0.00     0.00  box_geom
-part paddle       textures/faith_plate.png            0.00    -6.26    43.74  faith_plate_paddle
-part pend1        textures/faith_plate.png            0.00   -18.28   -30.84  pendulum_01_aim
-part pend2        textures/faith_plate.png            0.00   -23.11    20.37  pendulum_02_aim
-part lock         textures/faith_plate.png            0.00   -23.11    20.37  pendulum_lock_rotate
-part clip         textures/faith_plate.png            0.00     0.82    36.22  clip
-part backpiston   textures/faith_plate.png            0.06   -13.82   -23.76  backpiston_tip
-part frontpiston  textures/faith_plate.png            0.00    -3.67    13.23  front_piston_tip
-part glass        textures/faith_plate_glass.png      0.00     0.00     0.00  box_glass
+part body         textures/faith_plate.png            0.00     0.00     0.00  box_geom   0.00
+part paddle       textures/faith_plate.png            0.00    -6.26    43.74  faith_plate_paddle   0.00
+part pend1        textures/faith_plate.png            0.00   -18.28   -30.84  pendulum_01_aim   8.38
+part pend2        textures/faith_plate.png            0.00   -23.11    20.37  pendulum_02_aim   4.25
+part lock         textures/faith_plate.png            0.00   -23.11    20.37  pendulum_lock_rotate   0.00
+part clip         textures/faith_plate.png            0.00     0.82    36.22  clip   0.00
+part backpiston   textures/faith_plate.png            0.06   -13.82   -23.76  backpiston_tip  12.26
+part frontpiston  textures/faith_plate.png            0.00    -3.67    13.23  front_piston_tip   2.19
+part glass        textures/faith_plate_glass.png      0.00     0.00     0.00  box_glass   0.77
 
 # ============================== LARGE / TRIPLE (opt-in only) ==============================
 model large models/faith_plate_128.obj anims/faith_plate_128_anims.txt
 # id                 tex                                  px       py       pz  bone
-part faithplatebone_1       textures/faith_plate.png          38.00     0.00     0.00  faithplatebone_1
-part faithplatebone_18      textures/faith_plate.png         -38.00   -18.28    30.84  faithplatebone_18
-part faithplatebone_39      textures/faith_plate.png           0.00   -18.28   -30.84  faithplatebone_39
-part faithplatebone_6       textures/faith_plate.png          38.00   -18.28    30.84  faithplatebone_6
-part faithplatebone_26      textures/faith_plate.png         -38.00   -18.28    30.84  faithplatebone_26
-part faithplatebone_31      textures/faith_plate.png           0.00   -18.28   -30.84  faithplatebone_31
-part faithplatebone_14      textures/faith_plate.png          38.00   -18.28    30.84  faithplatebone_14
-part faithplatebone_15      textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_15
-part faithplatebone_3       textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_3
-part faithplatebone_28      textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_28
-part faithplatebone_19      textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_19
-part faithplatebone_23      textures/faith_plate.png         -38.04   -10.49   -30.46  faithplatebone_23
-part faithplatebone_24      textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_24
-part faithplatebone_25      textures/faith_plate.png         -38.06   -31.94    -8.21  faithplatebone_25
-part faithplatebone_21      textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_21
-part faithplatebone_22      textures/faith_plate.png         -38.00     0.82   -36.22  faithplatebone_22
-part faithplatebone_7       textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_7
-part faithplatebone_9       textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_9
-part faithplatebone_11      textures/faith_plate.png          37.96   -10.49   -30.46  faithplatebone_11
-part faithplatebone_12      textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_12
-part faithplatebone_13      textures/faith_plate.png          37.94   -31.94    -8.21  faithplatebone_13
-part faithplatebone_10      textures/faith_plate.png          38.00     0.82   -36.22  faithplatebone_10
-part faithplatebone_32      textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_32
-part faithplatebone_34      textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_34
-part faithplatebone_36      textures/faith_plate.png           0.06   -31.94     8.21  faithplatebone_36
-part faithplatebone_37      textures/faith_plate.png           0.04   -10.49    30.46  faithplatebone_37
-part faithplatebone_38      textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_38
-part faithplatebone_35      textures/faith_plate.png           0.00     0.82    36.22  faithplatebone_35
-part faithplatebone_17      textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_17
-part faithplatebone_16      textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_16
-part faithplatebone_5       textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_5
-part faithplatebone_4       textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_4
-part faithplatebone_29      textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_29
-part faithplatebone_30      textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_30
-part glass                  textures/faith_plate_glass.png     0.00     0.00     0.00  glass
+part faithplatebone_1       textures/faith_plate.png          38.00     0.00     0.00  faithplatebone_1   0.00
+part faithplatebone_18      textures/faith_plate.png         -38.00   -18.28    30.84  faithplatebone_18   9.45
+part faithplatebone_39      textures/faith_plate.png           0.00   -18.28   -30.84  faithplatebone_39   8.38
+part faithplatebone_6       textures/faith_plate.png          38.00   -18.28    30.84  faithplatebone_6   9.45
+part faithplatebone_26      textures/faith_plate.png         -38.00   -18.28    30.84  faithplatebone_26   8.38
+part faithplatebone_31      textures/faith_plate.png           0.00   -18.28   -30.84  faithplatebone_31   9.45
+part faithplatebone_14      textures/faith_plate.png          38.00   -18.28    30.84  faithplatebone_14   8.38
+part faithplatebone_15      textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_15   0.00
+part faithplatebone_3       textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_3   0.00
+part faithplatebone_28      textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_28   0.00
+part faithplatebone_19      textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_19   4.25
+part faithplatebone_23      textures/faith_plate.png         -38.04   -10.49   -30.46  faithplatebone_23   0.00
+part faithplatebone_24      textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_24   8.38
+part faithplatebone_25      textures/faith_plate.png         -38.06   -31.94    -8.21  faithplatebone_25  21.19
+part faithplatebone_21      textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_21   0.00
+part faithplatebone_22      textures/faith_plate.png         -38.00     0.82   -36.22  faithplatebone_22   0.00
+part faithplatebone_7       textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_7   4.25
+part faithplatebone_9       textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_9   0.00
+part faithplatebone_11      textures/faith_plate.png          37.96   -10.49   -30.46  faithplatebone_11   0.00
+part faithplatebone_12      textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_12   8.38
+part faithplatebone_13      textures/faith_plate.png          37.94   -31.94    -8.21  faithplatebone_13  21.19
+part faithplatebone_10      textures/faith_plate.png          38.00     0.82   -36.22  faithplatebone_10   0.00
+part faithplatebone_32      textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_32   4.25
+part faithplatebone_34      textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_34   0.00
+part faithplatebone_36      textures/faith_plate.png           0.06   -31.94     8.21  faithplatebone_36  21.19
+part faithplatebone_37      textures/faith_plate.png           0.04   -10.49    30.46  faithplatebone_37   0.00
+part faithplatebone_38      textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_38   8.38
+part faithplatebone_35      textures/faith_plate.png           0.00     0.82    36.22  faithplatebone_35   0.00
+part faithplatebone_17      textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_17   0.00
+part faithplatebone_16      textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_16   6.00
+part faithplatebone_5       textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_5   0.00
+part faithplatebone_4       textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_4   6.00
+part faithplatebone_29      textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_29   6.00
+part faithplatebone_30      textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_30   0.00
+part glass                  textures/faith_plate_glass.png     0.00     0.00     0.00  glass   0.00
 
 # skin <id> <tex>
 #   The small plate has TWO skin families - family 0 is the working plate, family 1 swaps the body
@@ -97,10 +97,13 @@ skin normal textures/faith_plate.png
 skin error  textures/faith_plate_error.png
 
 # tex <id> <file>
-# The LANDING indicator is Portal 2's own faith plate overlay signage_overlay_catapult2 - a
-# falling figure over concentric ground rings, which is what the game paints where a plate throws
-# you. (The earlier pick, overlays/command_target, is the CO-OP PING ring - a different thing
-# entirely.) catapult1 is the matching launch-side sign, kept for the plate itself.
+# The LANDING indicator is signage/mgf_overlay_bullseye - a centre dot inside concentric rings.
+# Found by parsing the BSP OVERLAY LUMP of sp_a2_catapult_intro and mp_coop_catapult_1: it is what
+# the game actually places as an info_overlay at catapult landing spots.
+# Two earlier picks were wrong and are worth recording so they are not tried again:
+#   overlays/command_target        - the CO-OP PING ring, a different feature entirely
+#   signage_overlay_catapult1/2    - the wall sign AT the plate (both sit at the same coordinates
+#                                    as each other, on the plate wall, not at any landing point)
 tex target        textures/target.png
 tex target_launch textures/target_launch.png
 tex target_alt    textures/target_orange.png
