@@ -40,7 +40,7 @@
 # ===================================== SMALL (default) =====================================
 model small models/faith_plate.obj anims/faith_plate_anims.txt
 # id                 tex                                  px       py       pz  bone
-part body         textures/faith_plate.png            0.00     0.00     0.00  -
+part body         textures/faith_plate.png            0.00     0.00     0.00  box_geom
 part paddle       textures/faith_plate.png            0.00    -6.26    43.74  faith_plate_paddle
 part pend1        textures/faith_plate.png            0.00   -18.28   -30.84  pendulum_01_aim
 part pend2        textures/faith_plate.png            0.00   -23.11    20.37  pendulum_02_aim
@@ -48,17 +48,17 @@ part lock         textures/faith_plate.png            0.00   -23.11    20.37  pe
 part clip         textures/faith_plate.png            0.00     0.82    36.22  clip
 part backpiston   textures/faith_plate.png            0.06   -13.82   -23.76  backpiston_tip
 part frontpiston  textures/faith_plate.png            0.00    -3.67    13.23  front_piston_tip
-part glass        textures/faith_plate_glass.png      0.00     0.00     0.00  -
+part glass        textures/faith_plate_glass.png      0.00     0.00     0.00  box_glass
 
 # ============================== LARGE / TRIPLE (opt-in only) ==============================
 model large models/faith_plate_128.obj anims/faith_plate_128_anims.txt
 # id                 tex                                  px       py       pz  bone
-part faithplatebone_1       textures/faith_plate.png          38.00     0.00     0.00  -
-part faithplatebone_18      textures/faith_plate.png         -38.00   -18.28    30.84  -
+part faithplatebone_1       textures/faith_plate.png          38.00     0.00     0.00  faithplatebone_1
+part faithplatebone_18      textures/faith_plate.png         -38.00   -18.28    30.84  faithplatebone_18
 part faithplatebone_39      textures/faith_plate.png           0.00   -18.28   -30.84  faithplatebone_39
-part faithplatebone_6       textures/faith_plate.png          38.00   -18.28    30.84  -
+part faithplatebone_6       textures/faith_plate.png          38.00   -18.28    30.84  faithplatebone_6
 part faithplatebone_26      textures/faith_plate.png         -38.00   -18.28    30.84  faithplatebone_26
-part faithplatebone_31      textures/faith_plate.png           0.00   -18.28   -30.84  -
+part faithplatebone_31      textures/faith_plate.png           0.00   -18.28   -30.84  faithplatebone_31
 part faithplatebone_14      textures/faith_plate.png          38.00   -18.28    30.84  faithplatebone_14
 part faithplatebone_15      textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_15
 part faithplatebone_3       textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_3
@@ -87,7 +87,7 @@ part faithplatebone_5       textures/faith_plate.png          38.00     2.59    
 part faithplatebone_4       textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_4
 part faithplatebone_29      textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_29
 part faithplatebone_30      textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_30
-part glass                  textures/faith_plate_glass.png     0.00     0.00     0.00  -
+part glass                  textures/faith_plate_glass.png     0.00     0.00     0.00  glass
 
 # skin <id> <tex>
 #   The small plate has TWO skin families - family 0 is the working plate, family 1 swaps the body
