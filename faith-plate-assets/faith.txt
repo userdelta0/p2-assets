@@ -1,0 +1,85 @@
+# Faith plate (Portal 2 "catapult") manifest -- LARGE 128 plate.
+#
+# Same parser contract as props.txt: ONE RECORD PER LINE, whitespace-separated, read with a plain
+# find("%S+") tokenizer. StarfallEx caps regex search length by pattern complexity (a 3-capture
+# pattern dies around 150 chars), so never rewrite this as a multi-capture match.
+#
+# Blank lines and lines starting with # are skipped. First token = record type.
+#
+# ---------------------------------------------------------------------------------------------
+# WHERE THIS CAME FROM (all verified against the retail game, not guessed):
+#   model  models/props/faith_plate_128.mdl   (MDL v49, 39 bones, 2 sequences, 1 skin family)
+#   This panel carries FOUR plate mechanisms; the moving-bone rotation signature
+#   (106.15 / 151.83 / 57.37 / 54.05 / 18.54 / 17.71 deg) repeats once per mechanism.
+#   In-game the plate is a prop_dynamic with DefaultAnim "idle" and solid 0 -- there is NO
+#   prop_faith_plate entity in retail Portal 2. The launch is a trigger_catapult, and logic_relays
+#   fire PlaySound + SetAnimation together (relay_up -> straightup is the one this model has).
+#   sound  ambient_generic "Metal_SeafloorCar.BulletImpact" -> doors/heavy_metal_stop1.wav
+#          CHAN_AUTO, SNDLVL_NORM, volume 0.70, ambient_generic radius 1250
+#
+# NOTE the model's material list also carries Maya placeholder names (blinn2/3/4/6, lambert1) that
+# have NO .vmt/.vtf in the game at all -- interior geometry that is never seen. Only faith_plate,
+# faith_plate_glass and anim_wp/arm_64x64_exterior resolve to real files.
+# ---------------------------------------------------------------------------------------------
+#
+# part <id> <obj> <tex> <px> <py> <pz> <bone>
+#   One rigid piece. ALL parts live in the SAME obj: mesh.createFromObj returns a table keyed by
+#   these ids, so load the file once and index it. The mesh is in MODEL space (shared origin), and
+#   <px py pz> is that piece's BONE PIVOT in the same space -- rotate the piece about its pivot.
+#   <bone> is the track in anims/faith_plate_128_anims.lua that drives it ("-" = static).
+#
+# id                     obj                        tex                                    px       py       pz  bone
+part faithplatebone_1       models/faith_plate_128.obj textures/faith_plate.png          38.00     0.00     0.00  -
+part faithplatebone_18      models/faith_plate_128.obj textures/faith_plate.png         -38.00   -18.28    30.84  -
+part faithplatebone_39      models/faith_plate_128.obj textures/faith_plate.png           0.00   -18.28   -30.84  faithplatebone_39
+part faithplatebone_6       models/faith_plate_128.obj textures/faith_plate.png          38.00   -18.28    30.84  -
+part faithplatebone_26      models/faith_plate_128.obj textures/faith_plate.png         -38.00   -18.28    30.84  faithplatebone_26
+part faithplatebone_31      models/faith_plate_128.obj textures/faith_plate.png           0.00   -18.28   -30.84  -
+part faithplatebone_14      models/faith_plate_128.obj textures/faith_plate.png          38.00   -18.28    30.84  faithplatebone_14
+part faithplatebone_15      models/faith_plate_128.obj textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_15
+part faithplatebone_3       models/faith_plate_128.obj textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_3
+part faithplatebone_28      models/faith_plate_128.obj textures/faith_plate.png          38.00   -13.63    48.97  faithplatebone_28
+part faithplatebone_19      models/faith_plate_128.obj textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_19
+part faithplatebone_23      models/faith_plate_128.obj textures/faith_plate.png         -38.04   -10.49   -30.46  faithplatebone_23
+part faithplatebone_24      models/faith_plate_128.obj textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_24
+part faithplatebone_25      models/faith_plate_128.obj textures/faith_plate.png         -38.06   -31.94    -8.21  faithplatebone_25
+part faithplatebone_21      models/faith_plate_128.obj textures/faith_plate.png         -38.00   -23.11   -20.37  faithplatebone_21
+part faithplatebone_22      models/faith_plate_128.obj textures/faith_plate.png         -38.00     0.82   -36.22  faithplatebone_22
+part faithplatebone_7       models/faith_plate_128.obj textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_7
+part faithplatebone_9       models/faith_plate_128.obj textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_9
+part faithplatebone_11      models/faith_plate_128.obj textures/faith_plate.png          37.96   -10.49   -30.46  faithplatebone_11
+part faithplatebone_12      models/faith_plate_128.obj textures/faith_plate.png          38.00   -23.11   -20.37  faithplatebone_12
+part faithplatebone_13      models/faith_plate_128.obj textures/faith_plate.png          37.94   -31.94    -8.21  faithplatebone_13
+part faithplatebone_10      models/faith_plate_128.obj textures/faith_plate.png          38.00     0.82   -36.22  faithplatebone_10
+part faithplatebone_32      models/faith_plate_128.obj textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_32
+part faithplatebone_34      models/faith_plate_128.obj textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_34
+part faithplatebone_36      models/faith_plate_128.obj textures/faith_plate.png           0.06   -31.94     8.21  faithplatebone_36
+part faithplatebone_37      models/faith_plate_128.obj textures/faith_plate.png           0.04   -10.49    30.46  faithplatebone_37
+part faithplatebone_38      models/faith_plate_128.obj textures/faith_plate.png           0.00   -23.11    20.37  faithplatebone_38
+part faithplatebone_35      models/faith_plate_128.obj textures/faith_plate.png           0.00     0.82    36.22  faithplatebone_35
+part faithplatebone_17      models/faith_plate_128.obj textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_17
+part faithplatebone_16      models/faith_plate_128.obj textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_16
+part faithplatebone_5       models/faith_plate_128.obj textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_5
+part faithplatebone_4       models/faith_plate_128.obj textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_4
+part faithplatebone_29      models/faith_plate_128.obj textures/faith_plate.png          37.94    -7.56    67.50  faithplatebone_29
+part faithplatebone_30      models/faith_plate_128.obj textures/faith_plate.png          38.00     2.59    30.52  faithplatebone_30
+part glass                  models/faith_plate_128.obj textures/faith_plate_glass.png     0.00     0.00     0.00  -
+
+# skin <id> <tex>
+#   This model has ONE skin family (unlike the small plate's two), so there is no error variant.
+skin normal textures/faith_plate.png
+
+# tex <id> <file>
+#   Auxiliary texture in the model's material list, shipped so parts that reference it can be
+#   textured if wanted.
+tex arm textures/arm_64x64_exterior.png
+
+# anim <id> <fps> <frames> <looping>
+#   Curves live in anims/faith_plate_128_anims.lua (per-frame LOCAL bone deltas vs bind pose:
+#   pos = {x,y,z} source units, rot = {p,y,r} degrees in GMod Angle order).
+anim BindPose   30   1  0
+anim straightup 30  99  0
+
+# sound <id> <file> <volume> <radius>
+#   The game's own values for the launch ambient_generic.
+sound launch sounds/launch.wav 0.70 1250
